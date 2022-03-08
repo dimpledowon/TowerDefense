@@ -12,9 +12,9 @@ public class ProjectileScripts : MonoBehaviour
     void Start()
     {
         // 방향을 정규화 한다
-        direction = direction.nomalized;
+        direction = direction.normalized;
         // 회전 값을 고친다
-        float angle = Mathf.atan2(-direction.y, direction.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(-direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         // 자폭용 타이머를 맞춘다
         Destroy(gameObject, lifeDuration);
